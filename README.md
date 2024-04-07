@@ -13,3 +13,4 @@ Thank you for the practice from DataYolk.
 
 ### List of Project
 - Car Dealership ( SQL-Coding )
+- HRAnalytic ( SQL-Coding )
