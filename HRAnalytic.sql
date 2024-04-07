@@ -177,4 +177,5 @@ GROUP BY role
 HAVING role = 'Marketing';
 
 
--- 
+-- Thank you Datayolk Facebook page🙏
+-- Run on Replit
