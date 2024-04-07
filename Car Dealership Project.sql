@@ -1,10 +1,7 @@
 -- Dataset
 
-.open standas.db
-
 -- Vehicle Table
-DROP TABLE Vehicle;
-CREATE TABLE IF NOT EXISTS Vehicle (
+CREATE TABLE Vehicle (
     VehicleID INTEGER PRIMARY KEY,
     ModelName TEXT,
     VehicleType TEXT,
@@ -13,16 +10,14 @@ CREATE TABLE IF NOT EXISTS Vehicle (
 );
 
 -- Salesperson Table
-DROP TABLE Salesperson;
-CREATE TABLE IF NOT EXISTS Salesperson (
+CREATE TABLE Salesperson (
     SalespersonID INTEGER PRIMARY KEY,
     FirstName TEXT,
     LastName TEXT
 );
 
 -- Sales Transaction Table
-DROP TABLE SalesTransaction;
-CREATE TABLE IF NOT EXISTS SalesTransaction (
+CREATE TABLE SalesTransaction (
     TransactionID INTEGER PRIMARY KEY,
     VehicleID INTEGER,
     SalespersonID INTEGER,
@@ -32,7 +27,7 @@ CREATE TABLE IF NOT EXISTS SalesTransaction (
 );
 
 -- Data for Vehicle Table
-INSERT INTO Vehicle VALUES
+INSERT INTO Vehicle (ModelName, VehicleType, Price, FuelType) VALUES
 ('Sedan A', 'Sedan', 1200000, 'Petrol'),
 ('SUV X', 'SUV', 1500000, 'Electric'),
 ('Hatchback B', 'Hatchback', 800000, 'Petrol'),
@@ -46,13 +41,13 @@ INSERT INTO Vehicle VALUES
 ('SUV B', 'SUV', 1300000, 'Electric');
 
 -- Data for Salesperson Table
-INSERT INTO Salesperson VALUES
+INSERT INTO Salesperson (FirstName, LastName) VALUES
 ('John', 'Doe'),
 ('Jane', 'Smith'),
 ('Bob', 'Johnson');
 
 -- Data for Sales Transaction Table
-INSERT INTO SalesTransaction VALUES
+INSERT INTO SalesTransaction (VehicleID, SalespersonID, SaleDate) VALUES
 (1, 1, '2023-03-01'),
 (2, 2, '2023-03-02'),
 (3, 1, '2023-03-03'),
@@ -65,6 +60,7 @@ INSERT INTO SalesTransaction VALUES
 (10, 2, '2024-03-04'),
 (11, 1, '2024-03-04'),
 (12, 2, '2024-03-04');
+
 
 ____________________________________________________________________________________
 
